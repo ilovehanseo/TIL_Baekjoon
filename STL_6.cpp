@@ -28,40 +28,50 @@ using namespace std;
 //	return 0;
 //}
 
-//25 10 5 1
+
+//연속된 단어 체크 좀 잘 푼듯?
+
+bool Group_Word(string);
+
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n,m;
-	int rest_M[4] = { 0 };
+	int n, cnt = 0;
 	cin >> n;
 
+	string str;
+
 	for (int i = 0; i < n; i++) {
-		cin >> m;
-		for (int i = 0; i < 4; i++) {
-			if (i == 0) {
-				rest_M[i] = m / 25;
-				m = m % 25;
-			}
-			else if (i == 1) {
-				rest_M[i] = m / 10;
-				m = m % 10;
-			}
-			else if (i == 2) {
-				rest_M[i] = m / 5;
-				m = m % 5;
-			}
-			else {
-				rest_M[i] = m;
-			}
-		}
-		for (int i = 0; i < 4; i++) {
-			cout << rest_M[i] << " ";
-		}
-		cout << endl;
+		cin >> str;
+		if (Group_Word(str))
+			cnt++;
 	}
+
+	cout << cnt;
 
 	return 0;
 }
 
+bool Group_Word(string str) {
+	int alpha[26] = { 0 };
+	size_t size = str.length();
+
+	for (char ch : str) { //알파벳의 개수
+		alpha[ch - 'a']++;
+	}
+
+	for (int i = 0; i < size;) {
+		int eng_cnt = alpha[str[i] - 'a'];
+		for (int j = i; j < i + eng_cnt; j++) { //개수만큼 이동
+			if (str[i] != str[j]) {
+				//cout << "연속하지 않습니다" << endl;
+				return false;
+			}
+		}
+		i += eng_cnt;
+	}
+	return true;
+
+
+}
