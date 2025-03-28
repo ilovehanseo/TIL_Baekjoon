@@ -47,16 +47,16 @@ bool end_judge(int n) {
 	}*/
 }
 
-bool multiple_Jug(int n) {
-	for (int x = 0; x <= 2000; x++) {
-		for (int y = 0; y <= 1000; y++) {
-			if (3 * x + 5 * y == n) {
-				return true;
-			}
-		}
-	}
-	return false;
-}
+//bool multiple_Jug(int n) {
+//	for (int x = 0; x <= 2000; x++) {
+//		for (int y = 0; y <= 1000; y++) {
+//			if (3 * x + 5 * y == n) {
+//				return true;
+//			}
+//		}
+//	}
+//	return false;
+//}
 
 int main() {
 	ios::sync_with_stdio(false);
@@ -75,15 +75,24 @@ int main() {
 	//}
 
 	int n, cnt = 0;
-	//cin >> n;
+	cin >> n;
+	int three = n / 3; // 6
+	int five = n / 5;  //3
 	
-	/*for (int i = 3;; i += 3) {
-		for (int j = 5;; j += 5) {
-
+	int result = 0, min = INT_MAX;
+	for (int i = 0; i <= five; i++) {
+		for (int j = 0; j <= three; j++) {
+			result = 5 * i + 3 * j;
+			if (result == n) {
+				cnt = i + j;
+				if (min > cnt)
+					min = cnt;
+			}
 		}
-	}*/
-
-	cout << pow(2000,1000)<<pow(1000,2000);
-
+	}
+	if (min!=INT_MAX)
+		cout << min;
+	else
+		cout << -1;
 	return 0;
 }
