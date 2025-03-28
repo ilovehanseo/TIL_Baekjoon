@@ -62,7 +62,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	//예제1
+	//3개의 원소의 합 구하기
 	//for (int i = 0; i < n; i++) {
 	//	for (int j = i+1; j < n; j++) {
 	//		for (int k = j+1; k < n; k++) {
@@ -74,25 +74,6 @@ int main() {
 	//	}
 	//}
 
-	int n, cnt = 0;
-	cin >> n;
-	int three = n / 3; // 6
-	int five = n / 5;  //3
-	
-	int result = 0, min = INT_MAX;
-	for (int i = 0; i <= five; i++) {
-		for (int j = 0; j <= three; j++) {
-			result = 5 * i + 3 * j;
-			if (result == n) {
-				cnt = i + j;
-				if (min > cnt)
-					min = cnt;
-			}
-		}
-	}
-	if (min!=INT_MAX)
-		cout << min;
-	else
-		cout << -1;
+
 	return 0;
 }
