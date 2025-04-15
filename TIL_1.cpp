@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
-//ÇÔ¼ö ¿À¹ö·Îµù
-//¸Þ¼­µåÀÇ ÀÌ¸§Àº °°°í ¸Å°³º¯¼öÀÇ À¯Çü°ú °³¼ö°¡ ´Ù¸£µµ·Ï ÇÏ´Â °Í
-//ÇÔ¼ö ¿À¹ö¶óÀÌµù
-//»ó¼Ó¹ÞÀº ¸Þ¼­µåÀÇ ³»¿ë¸¸ º¯°æÇÏ´Â °Í
+//í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©
+//ë©”ì„œë“œì˜ ì´ë¦„ì€ ê°™ê³  ë§¤ê°œë³€ìˆ˜ì˜ ìœ í˜•ê³¼ ê°œìˆ˜ê°€ ë‹¤ë¥´ë„ë¡ í•˜ëŠ” ê²ƒ
+//í•¨ìˆ˜ ì˜¤ë²„ë¼ì´ë”©
+//ìƒì†ë°›ì€ ë©”ì„œë“œì˜ ë‚´ìš©ë§Œ ë³€ê²½í•˜ëŠ” ê²ƒ
 
-//ÅÛÇÃ¸´
+//í…œí”Œë¦¿
 template <class Any>
 Any sum(Any, Any);
 
@@ -23,8 +23,8 @@ int main() {
 	//cout << sum(a, c) << endl;
 
 	cout << "github test" << endl;
-	//ÂüÁ¶
-	//¹Ì¸® Á¤ÀÇµÈ º¯¼öÀÇ ½ÇÁ¦ ÀÌ¸§ ´ë½Å »ç¿ëÇÒ ¼ö ÀÖ´Â ´ë¿ë ÀÌ¸§
+	//ì°¸ì¡°
+	//ë¯¸ë¦¬ ì •ì˜ëœ ë³€ìˆ˜ì˜ ì‹¤ì œ ì´ë¦„ ëŒ€ì‹  ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” ëŒ€ìš© ì´ë¦„
 	cout << divide(a, b) << endl;
 
 	return 0;
@@ -40,5 +40,5 @@ Few divide(Few a, Few b) {
 	if (a > 0 && b > 0)
 		return a / b;
 	else
-		cout << "Àß¸øµÈ ÀÔ·Â" << endl;
+		cout << "ìž˜ëª»ëœ ìž…ë ¥" << endl;
 }
